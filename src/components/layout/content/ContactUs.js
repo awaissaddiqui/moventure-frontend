@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Styles from '../../../styles/ContactUs.module.css';
-import emailjs from '@emailjs/browser';
 import { mySwal } from '../small_components/Alert';
 
 function ContactUs() {
@@ -21,35 +20,35 @@ function ContactUs() {
     const handleSubmit = (e) => {
         e.preventDefault();
         const apiKey = "IAbibblQkR-aVFxWX";
-        emailjs.sendForm('service_vv73isr', 'contact_form', e.target, apiKey)
-            .then((result) => {
-                mySwal.fire({
-                    title: 'Success',
-                    text: 'Message sent successfully',
-                    icon: 'success',
-                    showConfirmButton: false,
-                    timer: 2000
-                });
-                setFormData({
-                    name: '',
-                    email: '',
-                    message: '',
-                });
-            }, (error) => {
-                console.log(error.text);
-                mySwal.fire({
-                    title: 'Error',
-                    text: 'An error occurred, please try again',
-                    icon: 'error',
-                    showConfirmButton: true,
-                    timer: 2000
-                });
-                setFormData({
-                    name: '',
-                    email: '',
-                    message: '',
-                });
-            });
+        // emailjs.sendForm('service_vv73isr', 'contact_form', e.target, apiKey)
+        //     .then((result) => {
+        //         mySwal.fire({
+        //             title: 'Success',
+        //             text: 'Message sent successfully',
+        //             icon: 'success',
+        //             showConfirmButton: false,
+        //             timer: 2000
+        //         });
+        //         setFormData({
+        //             name: '',
+        //             email: '',
+        //             message: '',
+        //         });
+        //     }, (error) => {
+        //         console.log(error.text);
+        //         mySwal.fire({
+        //             title: 'Error',
+        //             text: 'An error occurred, please try again',
+        //             icon: 'error',
+        //             showConfirmButton: true,
+        //             timer: 2000
+        //         });
+        //         setFormData({
+        //             name: '',
+        //             email: '',
+        //             message: '',
+        //         });
+        //     });
        
     };
 

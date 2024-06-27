@@ -26,7 +26,7 @@ export const Navbar = () => {
                 <li className={styles.navItem}><Link to="/logout" className={styles.navLink}  >Log Out</Link></li>
                 <li className={styles.navItem}>
                 <Link to="/profile" className={styles.profileLink}>
-                <img src="https://via.placeholder.com/150" alt="User Profile" className={styles.profileIcon} />
+                <img src="https://via.placeholder.com/200" alt="User Profile" className={styles.profileIcon} />
                     </Link>
                 
         </li>
