@@ -15,18 +15,7 @@ function Accommodation() {
         address: '',
         pricePerNight: ''
     });
-    const key = "hB1wolvBptuOzof3BE72CEURVceL0yCwutwdaK3409Q"
-    //unslpash api
-    useEffect(() => {   
-        axios.get(`https://api.unsplash.com/photos/random?client_id=${key}&count=10`).then((response) => {
-            console.log(response.data[0].urls.raw);
-        }).catch((error) => {
-            console.log(error);
-        });
-       
-
-    },[]);
-    //end
+    
 
     useEffect(() => {
         const fetchAccommodations = () => {

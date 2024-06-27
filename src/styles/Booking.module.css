@@ -161,7 +161,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     .sideMenu {
         width: 100%;
         height: auto;
-        position: relative;
+        position: absolute;
     }
 
     .sideMenu ul li {
@@ -172,11 +172,16 @@ border: 1px solid rgba(255, 255, 255, 0.3);
         margin-left: 0;
     }
     .h2{
-        top: 20%;
-        left: 20%;
+        display: none;
     }
     .bookingForm {
-        top: 30%;
+        top: 50%;
         left: 20%;
     }
+    .bookingTable {
+        top: 50%;
+        left: 0%;
+    }
+
 }
+

@@ -159,3 +159,11 @@
     background-color: #f9f9f9;
 }
 
+@media (max-width: 768px) {
+    .card {
+        margin: 0 auto;
+        top: 14%;
+        left: 0;
+        right: 0;
+    }
+}
