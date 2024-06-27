@@ -1,0 +1,110 @@
+/* Styles for the Accommodation component */
+.accommodationContainer {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.accommodationContainer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.accommodationContainer button {
+    display: block;
+    margin: 10px auto 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.accommodationContainer button:hover {
+    background-color: #0056b3;
+}
+
+.accommodationForm {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.accommodationForm div {
+    margin-bottom: 15px;
+}
+
+.accommodationForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.accommodationForm input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.accommodationForm select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.accommodationForm button {
+    width: 100%;
+    background-color: #28a745;
+}
+
+.accommodationForm button:hover {
+    background-color: #218838;
+}
+
+.accommodationTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.accommodationTable th,
+.accommodationTable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.accommodationTable th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.accommodationTable tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.accommodationTable td button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.accommodationTable td button:hover {
+    background-color: #c82333;
+}

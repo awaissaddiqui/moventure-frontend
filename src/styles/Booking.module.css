@@ -1,0 +1,182 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.sideMenu {
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 250px;
+    padding-top: 30px;
+    position: fixed;
+    top: 15%;
+    left: 0;
+    height: 80%;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sideMenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sideMenu ul li {
+    padding: 20px 16px;
+    text-align: center;
+}
+
+.sideMenu ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-weight: bold;
+}
+
+.sideMenu ul li a:hover {
+    background-color: #575757;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.h2 {
+    margin-bottom: 20px;
+
+}
+
+.bookingForm {
+    background: rgba(236, 193, 193, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+.bookingForm input,
+.bookingForm select,
+.bookingForm button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 1rem;
+}
+
+.bookingForm button {
+    background-color: rgba(31, 38, 135, 0.7);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bookingForm button:hover {
+    background-color: rgba(31, 38, 135, 0.9);
+}
+
+.h22 {
+    text-align: center;
+    color: #47f712;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+
+}
+
+
+.bookingTable {
+    background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 70%;
+    border-collapse: collapse;
+    position: absolute;
+    top: 40%;
+    left: 23%;
+}
+
+.bookingTable th,
+.bookingTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px; /* Increase font size */
+    color: #e62525; /* Change font color */
+    font-weight: bold; /* Make font bold */
+}
+
+.bookingTable th {
+    background-color: #4c5d6b;
+}
+
+.bookingTable tr:hover {
+    background-color: #f1f1f1; /* Hover effect */
+}
+
+.bookingTable td {
+    transition: background-color 0.2s, color 0.2s; /* Smooth transition for hover effect */
+}
+.deleteBtn{
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+       
+    }
+
+    .sideMenu {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sideMenu ul li {
+        text-align: left;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+    .h2{
+        top: 20%;
+        left: 20%;
+    }
+    .bookingForm {
+        top: 30%;
+        left: 20%;
+    }
+}

@@ -1,0 +1,161 @@
+/* Styles for the card */
+.card {
+    background: rgba(255, 255, 255, 0.23);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    margin: -5rem auto;
+    max-width: 500px;
+    text-align: center;
+    color: #333;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+     /* Adjust this value as needed */
+}
+
+.image{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+.card h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.card p {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.button1 {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button2 {
+    background-color: #119e4c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button3{
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button4{
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button5 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button5:hover {
+    background-color: #45a049;
+}
+
+/* Feedback */
+
+/* Styles for the feedback section */
+.feedback {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.feedback textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stars span {
+    font-size: 2em;
+    cursor: pointer;
+    color: grey; /* Default star color */
+    transition: color 0.2s;
+}
+
+.stars span:hover,
+.stars span:hover ~ span {
+    color: yellow; /* Star color on hover */
+}
+
+.filledStar {
+    color: yellow; /* Star color when selected */
+}
+
+.emptyStar {
+    color: grey; /* Default star color */
+}
+
+/* Styles for the reviews section */
+.reviews {
+    margin-top: 20px;
+}
+
+.reviews h2 {
+    margin-bottom: 10px;
+}
+
+.reviewsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.reviewCard {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
