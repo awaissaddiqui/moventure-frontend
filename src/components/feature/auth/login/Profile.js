@@ -166,18 +166,21 @@ function Profile() {
                             Date of Birth:
                             <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} />
                         </label>
-                        <button type="submit">Save</button>
+                        <button type="submit" >Save</button>
                         <button type="button" onClick={() => setEditMode(false)}>Cancel</button>
                     </form>
                 ) : (
                     <>
                         <h2>{user.firstName} {user.lastName}</h2>
-                        <p><strong>Email:</strong> {user.email}</p>
-                        <p><strong>Phone:</strong> {user.phoneNumber}</p>
-                        <p><strong>Address:</strong> {user.address}</p>
-                        <p><strong>Date of Birth:</strong> {user.dateOfBirth}</p>
-                        <button onClick={() => setEditMode(true)}>Edit Profile</button>
-                        <button onClick={handleDelete}>Delete Profile</button>
+                        <p>Email:<strong>{user.email}</strong> </p>
+                        <p>Phone:<strong>{user.phoneNumber}</strong> </p>
+                        <p>Address:<strong>{user.address}</strong> </p>
+                        <p>Date of Birth:<strong>{user.dateOfBirth}</strong> </p>
+                        <div className={styles.btnContainer} >
+
+                        <button className={styles.btnUpdate} onClick={() => setEditMode(true)}>Edit Profile</button>
+                        <button className={styles.btnDelete} onClick={handleDelete}>Delete Profile</button>
+                        </div>
                     </>
                 )}
             </div>

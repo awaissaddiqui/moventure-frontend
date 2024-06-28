@@ -5,9 +5,14 @@ import { simpleUrl } from '../small_components/Url';
 import Styles from "../../../styles/SingleDestination.module.css";
 import { mySwal } from '../small_components/Alert';
 import { Rating } from 'react-simple-star-rating';
-
+import { useLocation } from 'react-router-dom';
 function SingleDestination() {
     const { id } = useParams();
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const price = queryParams.get('price');
+    localStorage.setItem("price", price);
+
     const [dest, setDest] = useState({ name: "", country: "", city: "", description: "" });
     const [editMode, setEditMode] = useState(false);
     const [feedbackMode, setFeedbackMode] = useState(false);
@@ -54,6 +59,14 @@ function SingleDestination() {
             navigate(`/booking/${id}`);
         }
     }
+
+    // const prices = [
+    //     '$100', '$200', '$330', '$410', '$520', 
+    //     '$260', '$170', '$780', '$90', '$100', 
+    //     '$110', '$120', '$130', '$140', '$150', 
+    //     '$160', '$170', '$180', '$190', '$200'
+    //   ];
+    //   const shuffledPrices = prices.sort(() => 0.5 - Math.random());
 
     useEffect(() => {
         window.scrollTo({top:0, behavior:'smooth'});
@@ -217,13 +230,14 @@ function SingleDestination() {
                     <h1>{dest.name}</h1>
                     <p>Country: <strong>{dest.country}</strong> </p>
                     <p>City: <strong>{dest.city}</strong> </p>
+                    <p>Price: <strong>{price}</strong> </p>
                     <p> <strong>{dest.description}</strong> </p>
                     
                 </div>
             )}
             <button onClick={handleClick} className={Styles.button1}>Book this Place</button>
             <Link to="/" ><button className={Styles.button2}>Destinations</button></Link>
-            <button onClick={handleUpdateClick} className={Styles.button3}>Update Destination</button>
+            {/* <button onClick={handleUpdateClick} className={Styles.button3}>Update Destination</button> */}
             <button onClick={handleFeedbackClick} className={Styles.button4}>Feedback</button>
             {feedbackMode && (
                 <div className={Styles.feedback}>

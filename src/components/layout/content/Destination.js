@@ -4,7 +4,7 @@ import { Link} from 'react-router-dom';
 
 
 
-function Destination({ name, description, country, city, id, imageUrl }) {
+function Destination({ name, description, country, city, id, imageUrl, price }) {
     const imagesArray =[
         "https://images.unsplash.com/photo-1715711200942-7c8abf4ae1c5?ixid=M3w2MjYzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTk0ODcxNDF8&ixlib=rb-4.0.3",
         "https://images.unsplash.com/photo-1715571527459-84b49e550d2c?ixid=M3w2MjYzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTk0ODc0Mjh8&ixlib=rb-4.0.3",
@@ -24,8 +24,9 @@ function Destination({ name, description, country, city, id, imageUrl }) {
             <h2>{name}</h2>
             <p><strong>Country:</strong> {country}</p>
             <p><strong>City:</strong> {city}</p>
+            <p>Price<strong>{price}</strong></p>
             <p>{description}</p>
-            <Link to={`/singledestination/${id}`}><button className={Styles.button} > View More</button></Link>
+            <Link to={`/singledestination/${id}?price=${price}`}><button className={Styles.button} > View More</button></Link>
         </div>
     );
 }

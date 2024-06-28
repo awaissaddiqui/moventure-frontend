@@ -23,16 +23,59 @@
     margin: 5px 0;
 }
 
-.profileDetails button {
-    margin: 10px 5px 0 0;
+/* .btnDelete {
+    margin: 10px 0;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #007BFF;
+    background-color: #d9534f;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
 }
+.btnUpdate{
+    margin: 10px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+} */
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Add space between the buttons */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+}
+
+.btnDelete, .btnUpdate {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnDelete {
+    background-color: #d9534f;
+}
+
+.btnUpdate {
+    background-color: #28a745;
+}
+
+@media (max-width: 600px) {
+    .btnContainer {
+        flex-direction: row; /* Stack buttons vertically on small screens */
+        gap: 10px; /* Adjust space between buttons for mobile */
+        padding: 10px;
+    }
+}
+
 
 .profileDetails button:hover {
     background-color: #0056b3;
@@ -75,4 +118,15 @@
 
 .profileForm button[type="button"]:hover {
     background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    .profileContainer {
+        left: 0;
+    }
+    .profileContainer button{
+        margin: 10px 5px 0 0;
+        padding: 10px 15px;
+       
+    }
 }

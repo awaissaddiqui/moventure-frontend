@@ -4,9 +4,15 @@ import axios from 'axios';
 import { simpleUrl } from '../small_components/Url';
 import { mySwal } from '../small_components/Alert';
 import Style from '../../../styles/Booking.module.css';
+// import { useLocation } from 'react-router-dom';
 
 const Bookings = () => {
     const { id } = useParams();
+    // const location = useLocation();
+    // const queryParams = new URLSearchParams(location.search);
+    // const price = queryParams.get('price');
+    const price=localStorage.getItem('price');
+
     const [form, setForm] = useState({
         bookingDate: '',
         totalCost: '',
@@ -22,10 +28,10 @@ const Bookings = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const { bookingDate, totalCost, status } = form;
+        const { bookingDate, price, status } = form;
         axios.post(`${simpleUrl}/booking`, {
             bookingDate,
-            totalCost,
+            totalCost:price,
             status,
             destinationId: id
         }, {
@@ -136,10 +142,11 @@ const Bookings = () => {
                             <input
                                 type="number"
                                 name="totalCost"
-                                placeholder="Total Cost"
-                                value={form.totalCost}
+                                placeholder={price}
+                                value={price}
                                 onChange={handleChange}
-                                required
+                                readOnly
+                                
                             />
                             <select name="status" value={form.status} onChange={handleChange} required>
                                 <option value="pending">Pending</option>
