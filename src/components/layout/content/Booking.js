@@ -11,7 +11,10 @@ const Bookings = () => {
     // const location = useLocation();
     // const queryParams = new URLSearchParams(location.search);
     // const price = queryParams.get('price');
-    const price=localStorage.getItem('price');
+    const storedPrice=localStorage.getItem('price');
+    const price = storedPrice.replace(/[^0-9.]/g, '');
+    
+    
 
     const [form, setForm] = useState({
         bookingDate: '',
@@ -28,7 +31,7 @@ const Bookings = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const { bookingDate, price, status } = form;
+        const { bookingDate, status } = form;
         axios.post(`${simpleUrl}/booking`, {
             bookingDate,
             totalCost:price,
@@ -142,9 +145,8 @@ const Bookings = () => {
                             <input
                                 type="number"
                                 name="totalCost"
-                                placeholder={price}
+                                placeholder={`\$${price}`}
                                 value={price}
-                                onChange={handleChange}
                                 readOnly
                                 
                             />
@@ -173,7 +175,7 @@ const Bookings = () => {
                                     return (
                                         <tr key={index}>
                                             <td>{date}</td>
-                                            <td>{booking.totalCost}</td>
+                                            <td>{`$${booking.totalCost}`}</td>
                                             <td>{booking.status}</td>
                                             <td><button className={Style.deleteBtn} onClick={handleDeleteBtn(booking.id)}>Delete</button></td>
                                         </tr>
