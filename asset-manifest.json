@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/moventure-frontend/static/css/main.56caa635.css",
-    "main.js": "/moventure-frontend/static/js/main.736a0990.js",
+    "main.js": "/moventure-frontend/static/js/main.6722ee3d.js",
     "static/js/453.1972a008.chunk.js": "/moventure-frontend/static/js/453.1972a008.chunk.js",
     "static/media/image7.svg": "/moventure-frontend/static/media/image7.d538e899ec227761f5ed.svg",
     "static/media/Image.svg": "/moventure-frontend/static/media/Image.9105e046c5fac9e1882160a9ba32e523.svg",
@@ -9,11 +9,11 @@
     "index.html": "/moventure-frontend/index.html",
     "static/media/Decore.svg": "/moventure-frontend/static/media/Decore.a3bf00ff48eae932e98a.svg",
     "main.56caa635.css.map": "/moventure-frontend/static/css/main.56caa635.css.map",
-    "main.736a0990.js.map": "/moventure-frontend/static/js/main.736a0990.js.map",
+    "main.6722ee3d.js.map": "/moventure-frontend/static/js/main.6722ee3d.js.map",
     "453.1972a008.chunk.js.map": "/moventure-frontend/static/js/453.1972a008.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.56caa635.css",
-    "static/js/main.736a0990.js"
+    "static/js/main.6722ee3d.js"
   ]
 }
