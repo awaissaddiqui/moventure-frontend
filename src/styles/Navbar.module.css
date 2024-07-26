@@ -10,11 +10,11 @@ html {
     display: flex;
     justify-content: space-between;
     position: relative;
-    background-image: url('../assets/image7.svg'); 
+    /* background-image: url('../assets/image7.svg');  */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; 
+    /* height: 100vh;  */
     
 }
 
