@@ -10,12 +10,13 @@ import Logout from "./feature/auth/login/Logout";
 import Profile from "./feature/auth/login/Profile";
 import Accommodation from "./layout/content/Accommodation";
 import FlightOfferForm from "./layout/content/Flights";
+import AppAds from "./layout/content/AppAds";
 
 const App = () => {
     return (
         <>
         <BrowserRouter>
-             <Navbar />
+             {/* <Navbar /> */}
             <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
@@ -26,6 +27,7 @@ const App = () => {
                 <Route path="/accommodation" element={<Accommodation/>} />
                 <Route path="/flights" element={<FlightOfferForm/>}/>
                 <Route path="/" element={<Body />} />
+                <Route path="/app-ads.txt" element={<AppAds />} />
             </Routes>
           </BrowserRouter>
   
